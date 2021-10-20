@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inner {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn {
+  display: block;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.task {
+  width: 100%;
+  background-color: #cecece;
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.task .task-name, 
+.task .task-date {
+  padding: 5px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task .delete {
+  font-size: .9rem;
+  color: hsl(0, 63%, 71%);
+  cursor: pointer;
+}
+
+.reminder {
+  background-color: green;
+  color: #fff;
+}
+
+.form-control {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-control input {
+  display: block;
+}
+.form-control input:not([type="checkbox"]) {
+  width: 100%;
+  padding: 10px;
 }
